@@ -20,6 +20,7 @@ const HotelsList = () => {
 
   return (
     <div>
+      <div className=""></div>
       <hr className="border-t-2 border-gray-300 mx-[10vw]" />
       <div className="px-20 py-10 max-w-7xl mx-auto space-y-6">
         {loading ? (
