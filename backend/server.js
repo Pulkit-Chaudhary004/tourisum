@@ -3,21 +3,20 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
-// Middlewares
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/tourismDB")
-  .then(() => console.log("Connected to MongoDB"))
-  .catch(err => console.error("MongoDB error:", err));
+// 🔗 Connect to MongoDB Compass (local MongoDB instance)
+mongoose.connect("mongodb+srv://chaaudharypulkit10:lBvOafRwiPeoHg5m++@cluster1.jmkcvma.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1")
+  .then(() => console.log("✅ Connected to MongoDB Compass"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
 
-// ✅ Import routes
+// Routes
 const hotelRoutes = require("./routes/hotelRoutes");
-
-// ✅ Use routes
 app.use("/hotels", hotelRoutes);
 
+// Start server
 app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+  console.log("🚀 Server running on http://localhost:5000");
 });

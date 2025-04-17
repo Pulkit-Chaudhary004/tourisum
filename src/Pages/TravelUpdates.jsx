@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import InfoTravel from '../Components/InfoTravel/InfoTravel';
 import Weather from '../Components/Weather/Weather';
-import Destinations from '../Components/Destinations/Destinations';
+// import Destinations from '../Components/Destinations/Destinations';
 import HotelsList from '../Components/HotelsList/HotelsList';
 import Footer from '../Components/Footer/Footer';
 
@@ -13,7 +13,7 @@ const TravelUpdates = () => {
       <Navbar />
       <InfoTravel/>
 
-      <Destinations/>
+      {/* <Destinations/> */}
       <HotelsList />
       <Weather />
       <Footer
